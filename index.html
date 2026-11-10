@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="kk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8fd">
+  <meta name="description" content="DysMath KZ — әр балаға арналған қазақ тіліндегі математика әлемі.">
+  <title>DysMath KZ — Математиканы ойнап үйрен</title>
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="vendor/katex/katex.min.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#home">Негізгі мазмұнға өту</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="DysMath KZ — басты бет">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40"><rect x="2" y="2" width="36" height="36" rx="13" fill="currentColor"/><path d="M12 12h16M20 12v16M12 20h16M12 28h16" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/><circle cx="20" cy="20" r="3" fill="#FFE58D"/></svg></span>
+      <span class="brand-name">DysMath <b>KZ</b></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Мәзірді ашу" aria-expanded="false"><span></span><span></span></button>
+    <nav class="main-nav" aria-label="Негізгі мәзір">
+      <a class="nav-link is-active" href="#home">Басты бет</a>
+      <a class="nav-link" href="#lessons">Сабақтар</a>
+      <a class="nav-link" href="#task-solver">Задача</a>
+      <a class="nav-link" href="#games">Ойындар</a>
+      <a class="nav-link" href="#achievements">Жетістіктер</a>
+      <a class="nav-link" href="#teacher-dashboard">Мұғалім</a>
+      <a class="nav-link" href="#settings">Баптаулар</a>
+    </nav>
+    <a class="profile-button" href="#profile" aria-label="Жеке кабинет"><span class="profile-avatar" id="header-avatar">😊</span><span class="profile-label" id="header-profile-name">Жеке кабинет</span><span class="profile-chevron">⌄</span></a>
+  </header>
+
+  <main id="home" tabindex="-1">
+    <section class="hero page-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="welcome-pill"><span class="welcome-sparkle">✦</span> БІЛІМ ӘЛЕМІНЕ ҚОШ КЕЛДІҢ!</div>
+        <h1 id="hero-title">Сәлем, кішкентай<br><span>математик!</span></h1>
+        <p class="hero-description">Математиканы ойнап жүріп үйренейік! Әр жаңа қадам — үлкен жетістік.</p>
+        <a class="primary-button" href="#lessons"><span>Сабақты бастау</span><span class="button-arrow" aria-hidden="true">→</span></a>
+        <div class="hero-meta"><span class="meta-avatars" aria-hidden="true"><i>😊</i><i>🌟</i><i>🎈</i></span><span><strong>Күн сайын</strong> жаңа қызық!</span></div>
+      </div>
+      <div class="hero-visual" role="img" aria-label="Көңілді математика сандары мен пішіндері">
+        <div class="visual-cloud cloud-a"></div><div class="visual-cloud cloud-b"></div>
+        <span class="doodle doodle-plus">+</span><span class="doodle doodle-three">3</span><span class="doodle doodle-star">✦</span><span class="doodle doodle-equals">=</span>
+        <span class="shape shape-circle"></span><span class="shape shape-triangle"></span><span class="shape shape-square"></span>
+        <div class="illustration-card"><div class="ill-card-top"><span class="tiny-label">БҮГІНГІ ЕСЕП</span><span class="tiny-badge">Оңай ✨</span></div><div class="equation"><span class="number number-one">2</span><span class="operator">+</span><span class="number number-two">3</span><span class="operator">=</span><span class="number number-answer">5</span></div><div class="ill-card-bottom"><span class="mini-progress"><i></i><i></i><i></i><i></i><i></i></span><span>Сенің қолыңнан келеді!</span></div></div>
+        <div class="mascot"><div class="mascot-body"><span class="mascot-eye eye-left"></span><span class="mascot-eye eye-right"></span><span class="mascot-smile"></span><span class="mascot-cheek cheek-left"></span><span class="mascot-cheek cheek-right"></span></div><span class="mascot-arm"></span><span class="mascot-leg leg-left"></span><span class="mascot-leg leg-right"></span></div>
+        <div class="hero-caption"><span class="caption-star">★</span><span><b>Керемет!</b><small>Сен бүгін де үйреніп жатырсың</small></span></div>
+      </div>
+    </section>
+
+    <section class="student-dashboard page-width" id="profile" aria-labelledby="profile-title">
+      <div class="dashboard-heading">
+        <div><p class="section-kicker">СЕНІҢ ЖЕКЕ КАБИНЕТІҢ</p><h2 id="profile-title"><span id="student-greeting">Сәлем!</span> <span class="greeting-star">✦</span></h2><p class="dashboard-subtitle">Білім жолыңдағы әр қадамың маңызды.</p></div>
+        <button class="edit-profile-button" type="button" id="edit-profile">✎ <span>Профильді өзгерту</span></button>
+      </div>
+      <div class="dashboard-grid">
+        <article class="stat-card stat-tasks"><span class="stat-icon">✓</span><div><span class="stat-label">Орындалған тапсырма</span><strong class="stat-value" id="completed-tasks">0</strong><span class="stat-note">Әр тапсырма — бір қадам!</span></div></article>
+        <article class="stat-card stat-stars"><span class="stat-icon">★</span><div><span class="stat-label">Жиналған жұлдыз</span><strong class="stat-value" id="collected-stars">0</strong><span class="stat-note">Жарқырай бер!</span></div></article>
+        <article class="stat-card stat-level"><span class="stat-icon">✦</span><div><span class="stat-label">Қазіргі деңгей</span><strong class="stat-value level-value" id="current-level">Бастапқы</strong><span class="stat-note">Өз қарқыныңмен үйрен</span></div></article>
+        <article class="stat-card stat-progress"><div class="progress-heading"><span class="stat-label">Оқу прогресі</span><strong id="progress-percent">0%</strong></div><div class="progress-track" role="progressbar" aria-label="Оқу прогресі" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div><span class="stat-note" id="progress-note">Алғашқы сабағыңды баста!</span></article>
+      </div>
+    </section>
+
+    <section class="lessons-section page-width" id="lessons" aria-labelledby="lessons-title">
+      <div class="section-heading"><div><p class="section-kicker">ӨЗ ЖОЛЫҢДЫ ТАҢДА</p><h2 id="lessons-title">Бүгін не үйренеміз?</h2></div><a class="all-link" href="#games">Барлығын көру <span>→</span></a></div>
+      <div class="lesson-grid">
+        <a class="lesson-card card-lilac" href="#lesson-dialog" data-topic="numbers"><span class="lesson-art art-count"><i>1</i><i>2</i><i>3</i><b>✦</b></span><span class="lesson-info"><span class="lesson-name">Сандар</span><span class="lesson-subtitle">Сандармен танысайық</span><span class="lesson-bottom"><span class="lesson-tag">Бастапқы</span><span class="lesson-arrow">↗</span></span></span></a>
+        <a class="lesson-card card-blue" href="#lesson-dialog" data-topic="addition"><span class="lesson-art art-add"><i>+</i><b>2</b><small>3</small><em>✦</em></span><span class="lesson-info"><span class="lesson-name">Қосу</span><span class="lesson-subtitle">Бірге санап көрейік</span><span class="lesson-bottom"><span class="lesson-tag">Бастапқы</span><span class="lesson-arrow">↗</span></span></span></a>
+        <a class="lesson-card card-yellow" href="#lesson-dialog" data-topic="subtraction"><span class="lesson-art art-minus"><i>−</i><b>5</b><small>2</small><em>✦</em></span><span class="lesson-info"><span class="lesson-name">Азайту</span><span class="lesson-subtitle">Санды кемітуді үйрен</span><span class="lesson-bottom"><span class="lesson-tag">Бастапқы</span><span class="lesson-arrow">↗</span></span></span></a>
+        <a class="lesson-card card-pink" href="#lesson-dialog" data-topic="multiplication"><span class="lesson-art art-times"><i>×</i><b>3</b><small>4</small><em>✦</em></span><span class="lesson-info"><span class="lesson-name">Көбейту</span><span class="lesson-subtitle">Қызықты көбейту әлемі</span><span class="lesson-bottom"><span class="lesson-tag">Келесі қадам</span><span class="lesson-arrow">↗</span></span></span></a>
+        <a class="lesson-card card-mint" href="#lesson-dialog" data-topic="division"><span class="lesson-art art-divide"><i>÷</i><b>8</b><small>2</small><em>✦</em></span><span class="lesson-info"><span class="lesson-name">Бөлу</span><span class="lesson-subtitle">Тең бөліп үйренейік</span><span class="lesson-bottom"><span class="lesson-tag">Келесі қадам</span><span class="lesson-arrow">↗</span></span></span></a>
+      </div>
+    </section>
+
+    <section class="games-section page-width" id="games" aria-labelledby="games-title">
+      <div class="section-heading"><div><p class="section-kicker">ОЙНА, ОЙЛАН, ҮЙРЕН</p><h2 id="games-title">Ойындар әлемі</h2><p class="games-intro">Әр ойын үш деңгейден тұрады. Дұрыс жауапқа ұпай мен жұлдыз жина!</p></div><span class="games-decoration" aria-hidden="true">🎲</span></div>
+      <div class="games-grid">
+        <button class="game-card game-count" type="button" data-game="count"><span class="game-card-art">🍎 🍎 🍎</span><span class="game-card-body"><b>Сандарды сана</b><small>Заттарды сана да, санын тап.</small><span class="game-card-meta"><span><strong id="count-score">0</strong> ұпай</span><span><strong id="count-stars">0</strong> ⭐</span><span id="count-level">1-деңгей</span></span></span><span class="game-card-go">Ойнау →</span></button>
+        <button class="game-card game-answer" type="button" data-game="answer"><span class="game-card-art">2 + 3 = ?</span><span class="game-card-body"><b>Дұрыс жауапты таңда</b><small>Есепті шығар да, жауабын белгіле.</small><span class="game-card-meta"><span><strong id="answer-score">0</strong> ұпай</span><span><strong id="answer-stars">0</strong> ⭐</span><span id="answer-level">1-деңгей</span></span></span><span class="game-card-go">Ойнау →</span></button>
+        <button class="game-card game-match" type="button" data-game="match"><span class="game-card-art">🔵🔵🔵 ↔ 3</span><span class="game-card-body"><b>Суреттерді сәйкестендір</b><small>Суреттегі затты санына сәйкестендір.</small><span class="game-card-meta"><span><strong id="match-score">0</strong> ұпай</span><span><strong id="match-stars">0</strong> ⭐</span><span id="match-level">1-деңгей</span></span></span><span class="game-card-go">Ойнау →</span></button>
+        <button class="game-card game-puzzle" type="button" data-game="puzzle"><span class="game-card-art">🧩 4 × ?</span><span class="game-card-body"><b>Математикалық пазл</b><small>Бос орынды дұрыс санмен толтыр.</small><span class="game-card-meta"><span><strong id="puzzle-score">0</strong> ұпай</span><span><strong id="puzzle-stars">0</strong> ⭐</span><span id="puzzle-level">1-деңгей</span></span></span><span class="game-card-go">Ойнау →</span></button>
+      </div>
+    </section>
+    <section class="teacher-section page-width" id="teacher-dashboard" aria-labelledby="teacher-title">
+      <div class="teacher-heading"><div><p class="section-kicker">ОҚУ НӘТИЖЕЛЕРІ</p><h2 id="teacher-title">Мұғалім кабинеті</h2><p>Әр оқушының жетістігі мен қосымша қолдау қажет тақырыптарын шол.</p></div><span class="teacher-decoration" aria-hidden="true">📊</span></div>
+      <div class="teacher-source-switch" role="group" aria-label="Нәтиже деректерін таңда"><button class="teacher-source-button is-active" type="button" data-teacher-source="real" aria-pressed="true">Нақты оқушы деректері</button><button class="teacher-source-button" type="button" data-teacher-source="demo" aria-pressed="false">Демонстрациялық деректер</button></div>
+      <p class="teacher-source-note" id="teacher-source-note" aria-live="polite"></p>
+      <div class="teacher-kpis" id="teacher-kpis"></div>
+      <div class="teacher-content-grid"><section class="teacher-panel teacher-students-panel" aria-labelledby="teacher-students-title"><div class="teacher-panel-heading"><h3 id="teacher-students-title">Оқушылар тізімі</h3><span id="teacher-student-count">0 оқушы</span></div><div id="teacher-student-list" class="teacher-student-list"></div></section><section class="teacher-panel teacher-detail-panel" id="teacher-student-detail" aria-live="polite"></section></div>
+    </section>
+    <section class="extra-section page-width achievement-section" id="achievements" aria-labelledby="achievements-title"><div class="extra-icon trophy-icon">🏆</div><div><p class="section-kicker">ӘР ҚАДАМ — ЖЕҢІС</p><h2 id="achievements-title">Жетістіктерің</h2><p>Үйренген сайын жұлдыз жинап, өзіңмен мақтан!</p></div><span class="achievement-stars">✦ ✦ ✦</span></section>
+    <section class="accessibility-section page-width" id="settings" aria-labelledby="settings-title">
+      <div class="accessibility-heading"><span class="accessibility-icon" aria-hidden="true">⚙️</span><div><p class="section-kicker">ӨЗІҢЕ ЫҢҒАЙЛА</p><h2 id="settings-title">Қолжетімділік баптаулары</h2><p>Өзіңе ыңғайлы көріністі таңдап, кез келген уақытта өзгерте аласың.</p></div></div>
+      <div class="accessibility-grid">
+        <fieldset class="accessibility-control"><legend>Қаріп өлшемі</legend><p>Мәтінді өзіңе ыңғайлы етіп үлкейт.</p><div class="choice-row font-choices">
+          <label><input type="radio" name="access-font-size" value="small"><span>Кіші</span></label><label><input type="radio" name="access-font-size" value="medium" checked><span>Орташа</span></label><label><input type="radio" name="access-font-size" value="large"><span>Үлкен</span></label><label><input type="radio" name="access-font-size" value="xlarge"><span>Өте үлкен</span></label>
+        </div></fieldset>
+        <fieldset class="accessibility-control"><legend>Түс режимі</legend><p>Көзіңе жайлы түстерді таңда.</p><div class="choice-row color-choices">
+          <label><input type="radio" name="access-color-mode" value="normal" checked><span>Қалыпты</span></label><label><input type="radio" name="access-color-mode" value="contrast"><span>Жоғары контраст</span></label><label><input type="radio" name="access-color-mode" value="comfortable"><span>Көзге жайлы</span></label>
+        </div></fieldset>
+        <label class="accessibility-toggle"><span class="toggle-copy"><b>Дыбыстық көмекші</b><small>Есептер мен нұсқаулықтарды дыбыстайды.</small></span><input type="checkbox" id="access-sound-toggle" checked><span class="access-toggle-track" aria-hidden="true"></span></label>
+        <label class="accessibility-toggle"><span class="toggle-copy"><b>Анимацияларды азайту</b><small>Қозғалыс пен ауысу әсерлерін шектейді.</small></span><input type="checkbox" id="access-motion-toggle"><span class="access-toggle-track" aria-hidden="true"></span></label>
+        <label class="accessibility-toggle"><span class="toggle-copy"><b>Үлкен батырмалар</b><small>Басқару элементтерін үлкейтіп көрсетеді.</small></span><input type="checkbox" id="access-large-buttons"><span class="access-toggle-track" aria-hidden="true"></span></label>
+      </div>
+      <p class="accessibility-save-note" id="accessibility-save-note" aria-live="polite">Баптаулар осы браузерде сақталады.</p>
+    </section>
+
+    <section class="about-section" id="about"><div class="page-width about-grid"><div class="about-intro"><p class="section-kicker">БІЗ ТУРАЛЫ</p><h2>Әр балаға<br>математика жақын.</h2><p>DysMath KZ — қазақ тілінде оқуға арналған мейірімді білім кеңістігі.</p></div><article class="about-card"><span class="about-icon">💜</span><h3>Біздің мақсат</h3><p>Әр баланың қабілет, қарқын, оқу ерекшелігін құрметтеп, математиканы түсінікті әрі қызықты ету.</p></article><article class="about-card"><span class="about-icon blue-icon">☁️</span><h3>Қолжетімді оқу</h3><p>Айқын қадамдар, жайлы түстер және тыныш орта әр оқушыға өз жолымен үйренуге көмектеседі.</p></article></div></section>
+
+    <section class="solver-section page-width" id="task-solver" aria-labelledby="solver-title">
+      <div class="solver-intro">
+        <p class="section-kicker">ПОМОЩНИК ПО МАТЕМАТИКЕ</p>
+        <h2 id="solver-title">Решение задачи</h2>
+        <p>Запишите условие задачи. Формулу можно посмотреть крупно и удобно.</p>
+      </div>
+      <div class="solver-card">
+        <label class="solver-label" for="solver-question">Условие задачи</label>
+        <textarea id="solver-question" rows="4" placeholder="Например: 3 + 2 = ?" aria-describedby="solver-help"></textarea>
+        <p class="solver-help" id="solver-help">Для формулы введите простой пример: 3 + 2 = ? или 8 ÷ 2.</p>
+        <div class="solver-formula-wrap">
+          <span class="solver-formula-label">Формула</span>
+          <div class="solver-formula" id="solver-formula" aria-live="polite">Формула появится здесь</div>
+        </div>
+        <button class="solver-submit" type="button" id="solve-task"><span class="solver-button-icon" aria-hidden="true">✦</span>Решить задачу</button>
+        <div class="solver-status" id="solver-status" role="status" aria-live="polite"></div>
+        <p class="solver-local-note">Локальный интерфейс: ИИ-сервис не подключён, введённая задача никуда не отправляется.</p>
+      </div>
+    </section>
+  </main>
+  <dialog class="profile-dialog" id="profile-dialog" aria-labelledby="dialog-title">
+    <form class="profile-form" id="profile-form">
+      <div class="dialog-heading"><span class="dialog-sparkle">✦</span><button class="dialog-close" type="button" id="close-profile" aria-label="Жабу">×</button><p class="section-kicker">ЖЕКЕ КАБИНЕТ</p><h2 id="dialog-title">Өзіңмен танысайық!</h2><p>Есімің мен сүйікті аватарыңды таңда.</p></div>
+      <label class="field-label" for="student-name">Сенің есімің</label>
+      <input id="student-name" name="name" type="text" maxlength="24" autocomplete="given-name" placeholder="Мысалы, Аружан" required>
+      <fieldset class="avatar-field"><legend class="field-label">Аватарыңды таңда</legend><div class="avatar-options">
+        <label class="avatar-choice"><input type="radio" name="avatar" value="😊" checked><span>😊</span></label><label class="avatar-choice"><input type="radio" name="avatar" value="🐼"><span>🐼</span></label><label class="avatar-choice"><input type="radio" name="avatar" value="🦊"><span>🦊</span></label><label class="avatar-choice"><input type="radio" name="avatar" value="🐸"><span>🐸</span></label><label class="avatar-choice"><input type="radio" name="avatar" value="🦄"><span>🦄</span></label><label class="avatar-choice"><input type="radio" name="avatar" value="🐱"><span>🐱</span></label>
+      </div></fieldset>
+      <fieldset class="level-field"><legend class="field-label">Оқу деңгейін таңда</legend><div class="level-options">
+        <label class="level-choice"><input type="radio" name="level" value="Бастапқы" checked><span><b>🌱</b>Бастапқы</span></label><label class="level-choice"><input type="radio" name="level" value="Орташа"><span><b>🌿</b>Орташа</span></label><label class="level-choice"><input type="radio" name="level" value="Жоғары"><span><b>🚀</b>Жоғары</span></label>
+      </div></fieldset>
+      <p class="storage-note">Таңдауларың осы браузерде сақталады.</p>
+      <div class="dialog-actions"><button class="cancel-profile-button" type="button" id="cancel-profile">Кейінірек</button><button class="save-profile-button" type="submit">Сақтау <span>→</span></button></div>
+    </form>
+  </dialog>
+  <dialog class="lesson-dialog" id="lesson-dialog" aria-labelledby="lesson-title">
+    <div class="lesson-player">
+      <button class="lesson-close" type="button" id="close-lesson" aria-label="Сабақты жабу">×</button>
+      <section class="speech-panel" aria-label="Дыбыстық көмекші">
+        <div class="speech-actions">
+          <button class="speech-button speech-read" id="speak-question" type="button"><span aria-hidden="true">🔊</span> Есепті тыңдау</button>
+          <button class="speech-button speech-guide" id="speak-instruction" type="button"><span aria-hidden="true">💬</span> Нұсқаулықты тыңдау</button>
+          <button class="speech-button speech-stop" id="stop-speech" type="button"><span aria-hidden="true">⏹</span> Тоқтату</button>
+        </div>
+        <div class="speech-settings">
+          <label class="speech-toggle"><input type="checkbox" id="speech-enabled" checked><span class="speech-check" aria-hidden="true"></span><span>Дыбысты қосу</span></label>
+          <label class="speech-rate-label" for="speech-rate"><span>Жылдамдығы</span><output id="speech-rate-value" for="speech-rate">1.0×</output></label>
+          <input class="speech-rate" id="speech-rate" type="range" min="0.7" max="1.3" step="0.1" value="1" aria-label="Дыбыстау жылдамдығы">
+        </div>
+        <p class="speech-voice-note" id="speech-voice-note" aria-live="polite"></p>
+        <p class="speech-status" id="speech-status" aria-live="polite"></p>
+      </section>
+      <div id="lesson-content"></div>
+    </div>
+  </dialog>
+  <dialog class="game-dialog" id="game-dialog" aria-labelledby="game-title">
+    <div class="game-player"><button class="game-close" id="close-game" type="button" aria-label="Ойынды жабу">×</button><div id="game-content"></div></div>
+  </dialog>
+  <footer class="site-footer"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">∑</span><span class="brand-name">DysMath <b>KZ</b></span></a><span>Математиканы бірге үйренейік! <span class="footer-heart">♥</span></span><span>© <span id="year"></span> DysMath KZ</span></footer>
+</body>
+</html>
+
+
